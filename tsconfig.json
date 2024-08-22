@@ -3,6 +3,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./src/app",
+    "paths": {
+      "@core/*": ["core/*"],
+      "@shared/*": ["shared/*"],
+      "@modules/*": ["modules/*"],
+      "@data/*": ["data/*"],
+    },
+    "resolveJsonModule": true,
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
