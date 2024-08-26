@@ -3,12 +3,13 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "resolvePackageJsonImports": true,
     "baseUrl": "./src/app",
     "paths": {
       "@core/*": ["core/*"],
       "@shared/*": ["shared/*"],
       "@modules/*": ["modules/*"],
-      "@data/*": ["data/*"],
+      "@data/*": ["data/*"]
     },
     "resolveJsonModule": true,
     "outDir": "./dist/out-tsc",
@@ -26,10 +27,7 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
