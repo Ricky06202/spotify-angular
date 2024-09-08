@@ -48,20 +48,20 @@ export class SideBarComponent {
     this.customOptions = [
       {
         name: 'Mi lista 1',
-        router: ['/']
+        router: ['/'],
       },
       {
         name: 'Mi lista 2',
-        router: ['/']
+        router: ['/'],
       },
       {
         name: 'Mi lista 3',
-        router: ['/']
+        router: ['/'],
       },
       {
         name: 'Mi lista 4',
-        router: ['/']
+        router: ['/'],
       },
-    ]
+    ];
   }
 }
