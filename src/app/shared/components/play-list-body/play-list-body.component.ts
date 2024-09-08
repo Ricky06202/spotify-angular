@@ -8,8 +8,23 @@ import * as dataRaw from '@data/tracks.json';
 })
 export class PlayListBodyComponent {
   tracks: TrackModel[] = [];
+  optionSort: { property: string | null; order: string } = {
+    property: null,
+    order: 'asc',
+  };
   ngOnInit(): void {
     const { data }: any = (dataRaw as any).default;
     this.tracks = data;
+  }
+
+  changeSort(property: string) {
+    const { order } = this.optionSort;
+    this.optionSort = {
+      property,
+      order:
+        order === 'desc' || property !== this.optionSort.property
+          ? 'asc'
+          : 'desc',
+    };
   }
 }
