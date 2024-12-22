@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { TrackModel } from '@core/models/tracks.models';
+import { MultimediaService } from '@shared/services/multimedia.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-media-player',
@@ -14,4 +16,19 @@ export class MediaPlayerComponent {
     url: 'http://localhost:3000/track.mp3',
     _id: 1,
   };
+
+  listObservers$: Array<Subscription> = [];
+
+  constructor(private multimediaService: MultimediaService) {}
+  ngOnInit(): void {
+    const observer1$: Subscription = this.multimediaService.callback.subscribe(
+      (track) => {
+        console.log(track);
+      }
+    );
+    this.listObservers$ = [observer1$];
+  }
+  ngOnDestroy(): void {
+    this.listObservers$.forEach((u) => u.unsubscribe());
+  }
 }

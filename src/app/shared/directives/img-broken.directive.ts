@@ -6,7 +6,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 export class ImgBrokenDirective {
   @HostListener('error') handleError() {
     const native = this.host.nativeElement;
-    native.src = '../../../assets/images/img-broken.jpg';
+    native.src = 'img-broken.jpg';
   }
   constructor(private host: ElementRef) {}
 }

@@ -20,7 +20,7 @@ export class SideBarComponent {
       {
         name: 'Home',
         icon: 'uil uil-home',
-        router: ['/'],
+        router: ['/', 'auth/login'],
       },
       {
         name: 'Buscar',
