@@ -9,7 +9,8 @@
       "@core/*": ["core/*"],
       "@shared/*": ["shared/*"],
       "@modules/*": ["modules/*"],
-      "@data/*": ["data/*"]
+      "@data/*": ["data/*"],
+      "@environments/*": ["../environments/*"]
     },
     "resolveJsonModule": true,
     "outDir": "./dist/out-tsc",
